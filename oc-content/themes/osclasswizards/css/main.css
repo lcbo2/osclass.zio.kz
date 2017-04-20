@@ -1,0 +1,31 @@
+/*меню*/
+.navbar-default .navbar-nav > li > a.btn {
+  color: #fff;
+}
+.navbar-default .navbar-nav > li > a.btn:hover,
+.navbar-default .navbar-nav > li > a.btn:focus {
+  color: #000;
+
+}
+/**
+Форма пойск
+*/
+.search-btn-right{
+    border-radius: 0px;
+    border-width: 1px 0px 1px;
+}
+.center{
+    text-align: center;
+}
+.right{
+  float: right!important;
+}
+.left{
+   float: left;
+}
+.marign-top-5{
+    margin-top: 5px; 
+}
+.marign-bottom-15{
+    margin-bottom: 15px; 
+}

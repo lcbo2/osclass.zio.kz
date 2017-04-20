@@ -1,0 +1,2 @@
+<?php profile_picture_upload(); ?>
+<?php profile_picture_show(); ?>

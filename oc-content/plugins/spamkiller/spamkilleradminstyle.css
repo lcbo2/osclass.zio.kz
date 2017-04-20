@@ -1,0 +1,34 @@
+.SpamKillersuccess {
+    background: #7FBF7F;
+    border: 1px solid green;
+    border-radius: 3px;
+    color: #FFFFFF;
+	padding: 10px;
+	font-weight: 700;
+	clear:both;
+	margin-bottom: 20px;
+}
+
+#spamkillermenu{
+margin-bottom: 20px;
+clear:both
+}
+
+#spamkillermenu ul{
+overflow:hidden;
+background: #000;
+margin:0;
+padding:0;
+
+}
+#spamkillermenu li{
+float:left;
+padding: 10px 40px;
+}
+#spamkillermenu li.current{
+background: #2EB0E4
+}
+#spamkillermenu li a{
+color: #FFFFFF;
+font-weight: 700;
+}

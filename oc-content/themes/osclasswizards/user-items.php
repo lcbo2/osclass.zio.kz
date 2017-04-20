@@ -26,9 +26,9 @@ osclasswizards_add_body_class('user user-items');
 
 //osc_add_hook('before-main','sidebar');
 
-function sidebar() {
-    osc_current_web_theme_path('user-sidebar.php');
-}
+//function sidebar() {
+//    osc_current_web_theme_path('user-sidebar.php');
+//}
 
 osc_current_web_theme_path('header.php');
 
@@ -37,7 +37,7 @@ osc_current_web_theme_path('header.php');
 
 <div class="row">
     <?php
-    osc_current_web_theme_path('user-sidebar.php');
+//    osc_current_web_theme_path('user-sidebar.php');
     ?>
     <div class="col-sm-8 col-md-9">
         <!-- Nav tabs -->
@@ -67,19 +67,16 @@ osc_current_web_theme_path('header.php');
         <div class="tab-content">
             <div class="tab-pane active" id="ads">
 
-                <div class="field-gird row">
-
-                    <div class=" col-md-12">
-
-                    </div>
-
-                    <!--chat_sidebar-->
-                </div>
+               <?php 
+               osc_current_web_theme_path('search.php');
+               ?> 
 
             </div>
 
             <div class="tab-pane" id="my_ads">
-                
+               <?php 
+               osc_current_web_theme_path('profiles/loops.php');
+               ?> 
             </div>
             <div class="tab-pane" id="messages">
 

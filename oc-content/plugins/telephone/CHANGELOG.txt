@@ -1,0 +1,10 @@
+Telephone  1.0.2
+-------------------------------
+Some minor issues fix in admin panel.
+
+
+Telephone  1.0.1
+-------------------------------
+Change log added.
+Change in admin panel.
+Hide last digits from number on item page.
