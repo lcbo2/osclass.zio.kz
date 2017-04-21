@@ -1,0 +1,19 @@
+/*
+* Copyright 2015, http://www.osclasswizards.com/
+* Based on bootstrap framework by http://getbootstrap.com/
+*/
+
+/*Color reset file*/
+
+#item-post h2, #related-searches li a, #show_filters, #tab_filter section li a, .block h2:after, .btn-focus, .btn-success, .btn-success:hover, .contact_button a, .custom .user_menu .watchlist_page a, .filters h3, .forgot .form-container-box .header:after, .forgot .form-container-box .resp-wrapper .ui-button, .item-header li .fa, .list_watch, .listing-attr .currency-value, .listings h2 .fa, .pagination a:hover, .pagination span, .rate_me span, .ribbon, .search_filter li li a, .thumbs a:hover, .title:after, .user-alerts .user_menu li.opt_alerts a, .user-change_email .user_menu li.opt_change_email a, .user-items .user_menu li.opt_items a, .user-passowrd_change .user_menu li.opt_change_password a, .user-profile .user_menu li.opt_account a, .user-username .user_menu li.opt_change_email a, .user-usernames .user_menu li.opt_change_username a, .user_menu li a:hover, .slick-arrow:hover {background-color: #dad019
+}
+#comment_form, #contact, #item-content, #mask_as_form, #user_data, .ads_300, .ads_header, .ads_home, .ads_search_bottom, .ads_search_top, .block section, .block_list, .circle, .comments_list, .dashboard_form form, .dashboard_watchlist, .forgot .form-container-box .resp-wrapper, .list_space, .listing-attr, .listing-attrs .listing-attr, .listings, .marker-holder, .page-not-found, .square, .top_links, .user-card figure, .user_detail_info, .wraps form {background-color: #f8fbfc;border: 1px solid #eaeaea
+}
+#footer, #footer a:hover, #item-post h2, #logo a, #main_search h2, #main_search h3, #related-searches li a, #show_filters, #tab_filter section li a, .contact_button a, .contact_button a:hover, .custom .watchlist_page a, .filters h3, .forgot .form-container-box .resp-wrapper .ui-button, .info_top, .info_top a, .item-header li .fa, .language ul li a, .links a, .list_watch, .list_watch a, .list_watch a:hover, .listing-attr .currency-value, .listings h2 .fa, .marker-label .fa, .mylocation-label .fa, .pagination a:hover, .pagination span, .rate_me span, .ribbon, .search_filter li li a, .subscription, .subscription h2, .thumbs a:hover, .toggle:focus, .toggle:hover, .user-alerts .user_menu li.opt_alerts a, .user-change_email .user_menu li.opt_change_email a, .user-items .user_menu li.opt_items a, .user-passowrd_change .user_menu li.opt_change_password a, .user-profile .user_menu li.opt_account a, .user-username .user_menu li.opt_change_email a, .user-usernames .user_menu li.opt_change_username a, .user_menu li a:hover, .slick-arrow:hover {color: #fff
+}
+#contact .name, #contact .name .fa, #contact .phone .fa, .attribute_list span.currency-value, .breadcrumb li.last-child span, .cell #ip_location:focus, .cell #ip_location:hover, .circle.checked:before, .circle.hover:before, .gm-style-iw .info_top span a, .info_top h4 a:focus, .language span, .language ul li a.active, .language ul li a:hover, .links a:hover, .listing-attr h4 a:hover, .listings h2 a:hover, .listings ul li.last a, .listings_list .detail_info h4 a:hover, .sort a.current, .sorting a.active, .square.checked:before, .square.hover:before, .votes_results .fa-star, a:active, a:focus, a:hover, ul.tabs li .fa {color: #dad019
+}
+.premium .list_space {background-color: rgba(230,138,0,.1)
+}
+#footer, #form_vh_map {border-top: solid 5px #dad019
+}
