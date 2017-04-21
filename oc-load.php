@@ -44,7 +44,7 @@ require_once LIB_PATH . 'osclass/default-constants.php';
 // Sets PHP error handling
 if( OSC_DEBUG ) {
     ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL | E_STRICT );
+    error_reporting( E_ERROR );
 
     if( OSC_DEBUG_LOG ) {
         ini_set( 'display_errors', 0 );
