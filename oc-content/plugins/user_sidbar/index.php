@@ -69,12 +69,28 @@ if(osc_version()<310) {
 function user_sidbar_init() {
     
 }
+/**
+ * оң жаға қойылатың меню және аватар
+ */
  function user_sidebar_show(){
       
      $user_id = osc_user_id();
       $user=osc_user();
     
-      render('index.php');
+      render('sidebar.php');
+    
+     
+     
+ }
+ /***
+  * жоғары қойылатын қолданушы туралы мәлемет
+  */
+ function user_sidebar_topbar(){
+      
+     $user_id = osc_user_id();
+      $user=osc_user();
+    
+      render('topbar.php');
     
      
      

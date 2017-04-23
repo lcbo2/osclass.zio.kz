@@ -41,29 +41,6 @@ $address = '';
     <h4><?=osc_user_name();?></h4>
 </div>
 
-    <div class="add_links field-gird row">
-       
-            <h5>О себе</h5>
-            <hr>
-             <ul id="user_data">
-        
-        <?php if( osc_user_website() !== '' ) { ?>
-        <li class="website"><i class="fa fa-link"></i> <strong><a target="_blank" href="<?php echo osc_user_website(); ?>"><?php echo osc_user_website(); ?></a></strong></li>
-        <?php } ?>
-        <?php if( $address !== '' ) { ?>
-        <li class="adress"> <i class="fa fa-map-marker"></i> <strong><?php _e('Address', OSCLASSWIZARDS_THEME_FOLDER);?>:</strong><br><?php echo $address; ?></li>
-        <?php } ?>
-        <?php if( $location !== '' ) { ?>
-        <li class="location"><i class="fa fa-location-arrow"></i> <strong><?php _e('Location', OSCLASSWIZARDS_THEME_FOLDER);?>:</strong><br><?php echo  $location; ?></li>
-        <?php } ?>
-      </ul>
-        
-        <div class="add_block">
-
-        </div>
-
-    </div>
-    <hr>
 
     <ul class="list-group">
         <li class="list-group-item">
@@ -83,7 +60,7 @@ $address = '';
         </li>
         <li class="list-group-item">
             <span class="badge">14</span>
-            <a href="#">
+            <a href="<?=osc_user_alerts_url()?>">
                 Уведемление</a>
         </li>
 

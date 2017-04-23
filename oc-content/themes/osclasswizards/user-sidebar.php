@@ -20,11 +20,7 @@
      */
 ?>
 
-<div class="col-sm-4 col-md-3">
+
  
         <?=user_sidebar_show();?> 
-  
 
-
-  
-</div>
