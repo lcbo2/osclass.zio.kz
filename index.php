@@ -15,6 +15,7 @@
  * limitations under the License.
  */
 
+error_reporting( E_ERROR );
     define('ABS_PATH', str_replace('\\', '/', dirname($_SERVER['SCRIPT_FILENAME']) . '/'));
     if(PHP_SAPI==='cli') {
         define('CLI', true);
@@ -95,6 +96,12 @@
                             require_once(osc_lib_path() . 'osclass/controller/item.php');
                             $do = new CWebItem();
                             $do->doModel();
+                            break;
+        case ('test'):      // item pages
+                            require_once(osc_lib_path() . 'osclass/controller/test.php');
+                            $do = new CWebTest();
+                            $do->doModel();
+                            break;
         break;
         case ('search'):    // search pages
                             require_once(osc_lib_path() . 'osclass/controller/search.php');

@@ -75,7 +75,7 @@ function profile_picture_upload(){
 	    echo '<script language="javascript">function deletePhoto(){document.forms["deleteForm"].submit();}</script>';
 
 	    $modtime = filemtime($upload_path.'profile'.$user_id.$result['pic_ext']); //ensures browser cache is refreshed if newer version of picture exists
-	    echo '<img src="'.osc_base_url() . 'oc-content/plugins/profile_picture/images/profile'.$user_id.$result['pic_ext'].'?'.$modtime.'" width="'.$maxwidth.'" height="'.$height.'">'; // display picture
+	    echo '<img src="'.osc_base_url() . 'oc-content/plugins/profile_picture/images/profile'.$user_id.$result['pic_ext'].'?'.$modtime.'" width="'.$maxwidth.'" height="'.$height.'" >'; // display picture
 	}
 	else { // show default photo since they haven't uploaded one
 	    if( isset($width) && isset($height))
@@ -151,7 +151,7 @@ function profile_picture_show(){
    // Configuration - Your Options ///////////////////////////////////////////////////////
 
     // Specify display width of picture (height will be automatically calculated proprotionally)
-    $maxwidth = '120';
+    $maxwidth = '250';
 
 
     ////// ***** No modifications below here should be needed ***** /////////////////////

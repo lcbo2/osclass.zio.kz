@@ -20,10 +20,10 @@
      */
 	 
 /*
-Theme Name: OsclassWizards
+Theme Name: OsclassWizards1
 Theme URI: http://www.osclasswizards.com
 Description: A simple and clean responsive theme for your classified site.
-Version: 2.0.2
+Version: 2.0.3
 Author: OsclassWizards
 Author URI: http://www.osclasswizards.com
 Widgets:  header, footer

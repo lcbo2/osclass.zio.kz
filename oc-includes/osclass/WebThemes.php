@@ -50,6 +50,8 @@
                                 'user-profile',
                                 'user-recover',
                                 'user-register',
+             'test',
+             'test-page',
                                 );
 
         public static function newInstance()

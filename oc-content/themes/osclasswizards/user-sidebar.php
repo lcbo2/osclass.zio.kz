@@ -21,14 +21,10 @@
 ?>
 
 <div class="col-sm-4 col-md-3">
-  <div id="sidebar"> 
-     
-     <?php profile_picture_upload(); 
-    //показ боковую сторну пользватель
- user_sidebar_show();
+ 
+        <?=user_sidebar_show();?> 
+  
 
 
-     ?>
-  </div>
   
 </div>

@@ -1,0 +1,20 @@
+~/oc-load.php
+Для своей работы Osclass загружает несколько глобальных переменных.
+ABS_PATH:
+LIB_PATH:
+THEMES_PATH:
+PLUGINS_PATH
+TRANSLATIONS_PATH
+OSCLASS_VERSION
+__OSC_LOADED__
+__FROM_CRON__
+помощники
+http://os-class.ru/wiki/%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0%D0%BC/hdefines-php
+HCategories.php
+http://os-class.ru/wiki/%D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D1%87%D0%B8%D0%BA%D0%B0%D0%BC/hcategories-php
+хуки
+https://doc.osclass.org/Hooks
+https://translate.google.kz/translate?sl=en&tl=ru&js=y&prev=_t&hl=ru&ie=UTF-8&u=https%3A%2F%2Fdoc.osclass.org%2FHooks&edit-text=&act=url
+необходимые функций
+ osc_plugins_path() - путь к плагину
+osc_user_id()

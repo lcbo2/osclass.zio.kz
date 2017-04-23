@@ -23,5 +23,6 @@ define('DB_TABLE_PREFIX', 'oc_');
 define('REL_WEB_URL', '/');
 
 define('WEB_PATH', 'http://dsite.kz/');
+define('OSC_DEBUG', TRUE) ;
 
 ?>

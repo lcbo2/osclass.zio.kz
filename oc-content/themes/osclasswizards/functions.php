@@ -1059,25 +1059,30 @@ function osclasswizards_countries_select($name, $id, $label, $value=NULL){
 
 	echo $html;
 }
-function osclasswizards_regions_select($name, $id, $label, $value=NULL){
+function osclasswizards_regions_select($name, $id, $label, $value = NULL) {
     $name = osc_esc_html($name);
     $id = osc_esc_html($id);
     $label = osc_esc_html($label);
-    
-	$aRegions = Region::newInstance()->listAll(); 
-	if(count($aRegions) > 0 ) { 
 
-		$html  = '<select name="'.$name.'" id="'.$id.'">';
-		$html .= '<option value="" id="sRegionSelect">'.$label.'</option>';
-		foreach($aRegions as $region) {
-			if($value == $region['s_name']) $selected = 'selected="selected"'; else $selected = '';
-			$html .= '<option value="'. $region['pk_i_id'].'" '.$selected.'>'. $region['s_name'].'</option>';
-		} 
-		$html .= '</select>';
-	} 
+    $aRegions = Region::newInstance()->listAll();
+    $html = '';
+    if (count($aRegions) > 0) {
+        
+        $html = '<select name="' . $name . '" id="' . $id . '">';
+        $html .= '<option value="" id="sRegionSelect">' . $label . '</option>';
+        foreach ($aRegions as $region) {
+            if ($value == $region['s_name'])
+                $selected = 'selected="selected"';
+            else
+                $selected = '';
+            $html .= '<option value="' . $region['pk_i_id'] . '" ' . $selected . '>' . $region['s_name'] . '</option>';
+        }
+        $html .= '</select>';
+    }
 
-	echo $html;
+    echo $html;
 }
+
 function osclasswizards_cities_select($name, $id, $label, $value=NULL){
     $name = osc_esc_html($name);
     $id = osc_esc_html($id);

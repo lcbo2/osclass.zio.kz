@@ -24,87 +24,57 @@ osc_add_hook('header', 'osclasswizards_nofollow_construct');
 
 osclasswizards_add_body_class('user user-items');
 
-//osc_add_hook('before-main','sidebar');
-
-//function sidebar() {
-//    osc_current_web_theme_path('user-sidebar.php');
-//}
 
 osc_current_web_theme_path('header.php');
-
-
+if (osclasswizards_show_as() == 'gallery') {
+    $loop_template = 'loop-user-grid.php';
+    $listClass = 'listing-grid';
+    $buttonClass = 'active';
+} else {
+    $loop_template = 'loop-user-list.php';
+    $listClass = '';
+    $buttonClass = '';
+}
 ?>
 
 <div class="row">
     <?php
-//    osc_current_web_theme_path('user-sidebar.php');
+    osc_current_web_theme_path('user-sidebar.php');
     ?>
     <div class="col-sm-8 col-md-9">
-        <!-- Nav tabs -->
-        <ul class="nav nav-tabs ">
-            <li class="active"><a href="#ads" data-toggle="tab">Обьявление</a></li>
-            <li><a href="#my_ads" data-toggle="tab">Мои обьявлений</a></li>
-            <li><a href="#messages" data-toggle="tab">Сообщения</a></li>
 
-            <li><a href="#links" data-toggle="tab">Связи</a></li>
-            <li><a href="#add_ads" data-toggle="tab" class="">Подать обьявление</a></li>
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    Еще <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#bill" data-toggle="tab">Счет</a></li>
-                    <li><a href="#settings" data-toggle="tab">Настройка</a></li>
-                    <li><a href="#help" data-toggle="tab">Помощь</a></li>
+        <div class="list-header">
+            <?php osc_run_hook('search_ads_listing_top'); ?>
+            <h1 class="title">
+                <?php _e('My listings', OSCLASSWIZARDS_THEME_FOLDER); ?>
+            </h1>
+          
+            <?php if (osc_count_items() == 0) { ?>
+                <p class="empty" >
+                    <?php _e('No listings have been added yet', OSCLASSWIZARDS_THEME_FOLDER); ?>
+                </p>
+            <?php } else { ?>
+            </div>
+            <?php
+            View::newInstance()->_exportVariableToView("listClass", $listClass);
+            View::newInstance()->_exportVariableToView("listAdmin", true);
+            osc_current_web_theme_path($loop_template);
+            ?>
+            <?php
+            if (osc_rewrite_enabled()) {
+                $footerLinks = osc_search_footer_links();
+                ?>
+                <ul class="footer-links">
+                    <?php foreach ($footerLinks as $f) {
+                        View::newInstance()->_exportVariableToView('footer_link', $f);
+                        ?>
+                        <?php if ($f['total'] < 3) continue; ?>
+                        <li><a href="<?php echo osc_footer_link_url(); ?>"><?php echo osc_footer_link_title(); ?></a></li>
+                <?php } ?>
                 </ul>
-            </li>
-
-
-
-        </ul>
-
-        <!-- Tab panes -->
-        <div class="tab-content">
-            <div class="tab-pane active" id="ads">
-
-               <?php 
-               osc_current_web_theme_path('search.php');
-               ?> 
-
-            </div>
-
-            <div class="tab-pane" id="my_ads">
-               <?php 
-               osc_current_web_theme_path('profiles/loops.php');
-               ?> 
-            </div>
-            <div class="tab-pane" id="messages">
-
-            </div>
-            <div class="tab-pane" id="bill">
-                <div class="row field-gird">
-
-                </div>  
-            </div>
-            <div class="tab-pane" id="links">
-                <div class="row field-gird">    
-
-
-                </div>
-
-            </div>
-            <div class="tab-pane" id="add_ads">
-
-            </div>
-            <div class="tab-pane" id="settings">
-
-            </div>
-            <div class="tab-pane" id="help">
-                <div class="row field-gird">
-
-                </div>  
-            </div> 
-        </div>
+            <?php } ?>
+            <div class="pagination"> <?php echo osc_pagination_items(); ?> </div>
+<?php } ?>
 
     </div>
 </div>

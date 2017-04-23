@@ -1,54 +1,108 @@
+<?php
+/***
+ * Анкета
+ */
+$address = '';
+    if(osc_user_address()!='') {
+        if(osc_user_city_area()!='') {
+            $address = osc_user_address().", ".osc_user_city_area();
+        } else {
+            $address = osc_user_address();
+        }
+    } else {
+        $address = osc_user_city_area();
+    }
+    $location_array = array();
+    if(trim(osc_user_city()." ".osc_user_zip())!='') {
+        $location_array[] = trim(osc_user_city()." ".osc_user_zip());
+    }
+    if(osc_user_region()!='') {
+        $location_array[] = osc_user_region();
+    }
+    if(osc_user_country()!='') {
+        $location_array[] = osc_user_country();
+    }
+    $location = implode(", ", $location_array);
+    unset($location_array);
+?>
+<div class="field-gird row">
+ <?=profile_picture_upload();?>   
+</div>
+<div class="add_links field-gird row">
+    <div class="col-md-6"><button type="button" class="btn btn-primary">Связаться</button></div>
+    <div class="col-md-6">
+        <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
+        <span class="glyphicon-class">785 Сообщение</span>
+    </div></div>
+<div class="add_links field-gird row">
+    <div class=""><a class="" href="#">Написать сообщение</a></div>
+</div>
+<div class="add_links field-gird row">
+    <h4><?=osc_user_name();?></h4>
+</div>
+
+    <div class="add_links field-gird row">
+       
+            <h5>О себе</h5>
+            <hr>
+             <ul id="user_data">
+        
+        <?php if( osc_user_website() !== '' ) { ?>
+        <li class="website"><i class="fa fa-link"></i> <strong><a target="_blank" href="<?php echo osc_user_website(); ?>"><?php echo osc_user_website(); ?></a></strong></li>
+        <?php } ?>
+        <?php if( $address !== '' ) { ?>
+        <li class="adress"> <i class="fa fa-map-marker"></i> <strong><?php _e('Address', OSCLASSWIZARDS_THEME_FOLDER);?>:</strong><br><?php echo $address; ?></li>
+        <?php } ?>
+        <?php if( $location !== '' ) { ?>
+        <li class="location"><i class="fa fa-location-arrow"></i> <strong><?php _e('Location', OSCLASSWIZARDS_THEME_FOLDER);?>:</strong><br><?php echo  $location; ?></li>
+        <?php } ?>
+      </ul>
+        
+        <div class="add_block">
+
+        </div>
+
+    </div>
+    <hr>
+
+    <ul class="list-group">
+        <li class="list-group-item">
+            <span class="badge">14</span>
+            <a href="<?=osc_search_category_url()?>">
+                Все запросы</a>
+        </li>
+        <li class="list-group-item">
+            <span class="badge">2</span>
+            <a href="<?=osc_user_list_items_url()?>">
+                Мои Запросы</a>
+        </li>
+        <li class="list-group-item">
+            <span class="badge">14</span>
+            <a href="#">
+                Все теги</a>
+        </li>
+        <li class="list-group-item">
+            <span class="badge">14</span>
+            <a href="#">
+                Уведемление</a>
+        </li>
+
+        <li class="list-group-item">
+            <span class="badge">1</span>
+            <a href="#">
+                Сообщение</a>
+        </li>
+        <li class="list-group-item">
+            <span class="badge">1</span>
+            <a href="#">
+                Связи</a>
+        </li>
+        <li class="list-group-item">
+            <span class="badge">1</span>
+            <a href="<?=osc_user_profile_url()?>">
+                Настройка</a>
+        </li>
+    </ul>
 
 
-
-
-                    <div class="field-gird row">
-                        <img src="img/265674.png" class="img-rounded img-responsive img-thumbnail" width="" height="">
-                        <h4 class="name"> Иван Ива</h4>
-                        <hr>
-                    </div>
-
-
-                    <div class="add_links field-gird row">
-                        <div class="col-md-6"><button type="button" class="btn btn-primary">Связаться</button></div>
-                        <div class="col-md-6">
-                            <i class="fa fa-bell fa-lg" aria-hidden="true"></i>
-                            <span class="glyphicon-class">785 Сообщение</span>
-                        </div></div>
-                    <div class="add_links field-gird row">
-                        <div class=""><a class="" href="#">Написать сообщение</a></div>
-                    </div>
-                    <div class="add_links field-gird row">
-                        <div class="">
-                            <h5>Инфо</h5>
-                            <hr>
-                        </div>
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <span class="badge">14</span>
-                                <a href="#">
-                                    Связи</a>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge">2</span>
-                                <a href="#">
-                                    Мои Обьявлений</a>
-                            </li>
-                            <li class="list-group-item">
-                                <span class="badge">1</span>
-                                <a href="#">
-                                    Комментарий</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="add_links field-gird row">
-                        <div class="">
-                            <h5>О себе</h5>
-                            <hr>
-                        </div>
-                        <div class="add_block">
-                            Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Curabitur aliquet quam id dui posuere blandit. Cras ultricies ligula sed magna dictum porta. Curabitur aliquet quam id dui posuere blandit. 
-                        </div>
-
-                    </div>
 
