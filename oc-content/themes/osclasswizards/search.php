@@ -73,8 +73,10 @@ function autocompleteCity() {
 <?php osc_current_web_theme_path('header.php'); ?>
 
 <div class="row">
-    <?php osc_current_web_theme_path('search-sidebar.php'); ?>
+      <div class="col-sm-4 col-md-3"><?=user_sidebar_show();?></div>
+   
     <div class="col-sm-8 col-md-9">
+         <?php osc_current_web_theme_path('search-sidebar.php'); ?>
         <div class="title">
             <h1><?php echo (search_title() != "") ? search_title() : '&nbsp;'; ?></h1>
         </div>

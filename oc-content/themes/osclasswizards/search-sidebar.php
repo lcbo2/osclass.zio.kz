@@ -25,7 +25,7 @@
 
 ?>
 
-<div class="col-sm-4 col-md-3">
+<div class="field-gird row">
   <aside id="sidebar" class="sidebar_search">
     <h2 id="show_filters">
       <?php _e('Show Filters', OSCLASSWIZARDS_THEME_FOLDER) ; ?>

@@ -36,10 +36,7 @@
 ?>
 
 <div class="row">
-  <?php
-	        osc_current_web_theme_path('user-sidebar.php');
-
-   ?>
+  <div class="col-sm-4 col-md-3"><?=user_sidebar_show();?></div>
   <div class="col-sm-8 col-md-9">
     <h1 class="title">
       <?php _e('Update account', OSCLASSWIZARDS_THEME_FOLDER); ?>
