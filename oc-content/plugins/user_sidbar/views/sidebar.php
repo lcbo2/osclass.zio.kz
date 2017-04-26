@@ -26,7 +26,8 @@ $address = '';
     unset($location_array);
 ?>
 <div class="field-gird row">
- <?=profile_picture_upload();?>   
+
+          <?=avatar_init()?>
 </div>
 <div class="add_links field-gird row">
     <div class="col-md-6"><button type="button" class="btn btn-primary">Связаться</button></div>

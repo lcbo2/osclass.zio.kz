@@ -38,9 +38,13 @@ if (osclasswizards_show_as() == 'gallery') {
 ?>
 
 <div class="row">  
-    <div class="col-sm-4 col-md-3"><?=user_sidebar_show();?></div>
+    <div class="col-sm-4 col-md-3">
+        
+<?=user_sidebar_show();?>
+    </div>
     <div class="col-sm-8 col-md-9">
         <div class="field-gird row">
+           
         <?=user_sidebar_topbar()?>
         </div>
         <div class="list-header">

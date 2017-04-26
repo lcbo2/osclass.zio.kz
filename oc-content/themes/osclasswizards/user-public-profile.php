@@ -68,7 +68,7 @@
   <div class="col-sm-4 col-md-3">
     <div class="user-card">
       <figure>
-          <?php profile_picture_upload(); ?>
+          <?php show_avatar(osc_user_id()) ?>
 
       </figure>
       <ul id="user_data">

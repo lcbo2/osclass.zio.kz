@@ -1269,5 +1269,12 @@
     function osc_is_subdomain() {
         return View::newInstance()->_get('subdomain_slug')!='';
     }
+    /***
+     * Возвращает текущий url страницы
+     * @return string
+     */
+    function osc_real_url() {
+        return osc_base_url(true).'?page='.osc_get_osclass_location().'&action='.osc_get_osclass_section();
+}
     /* file end: ./oc-includes/osclass/helpers/hDefines.php */
 
